@@ -10,6 +10,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'times',
+    loadChildren: () => import('./shared/components/times/times.module').then( m => m.TimesPageModule)
+  },
+  {
+    path: 'jogadores',
+    loadChildren: () => import('./shared/components/jogadores/jogadores.module').then( m => m.JogadoresPageModule)
   }
 ];
 
